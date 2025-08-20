@@ -1,0 +1,903 @@
+@font-face {
+    font-family: 'Ice kingdom (Frozen) Cyrillic';
+    src: url('../fonts/IcekingdomFrozenCyrillic-Bold.woff2') format('woff2'),
+        url('../fonts/IcekingdomFrozenCyrillic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --primary-color: #0650B9;
+    --secondary-color: #57B0F4;
+    --third-color: #FFFFFF;
+    --deep-bg: #001d46cc;
+    --font-size: 18px;
+    --padding: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Fira Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1320px;
+    margin: auto;
+    color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.0;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 300;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    color: var(--third-color);
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 22px;
+    color: var(--primary-color);
+    margin-bottom: 0;
+}
+
+p {
+    font-size: var(--font-size);
+    color: var(--primary-color);
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    margin: 10px 0;
+}
+
+/* === Шапка === */
+.header {
+    height: 110px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 10px var(--padding);
+}
+
+.header-logo a {
+    font-family: 'Ice kingdom (Frozen) Cyrillic';
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--primary-color);
+    line-height: 100%;
+}
+
+.header-logo span {
+    font-family: 'Ice kingdom (Frozen) Cyrillic';
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+.header-right {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.header-right-contacts {
+    display: flex;
+    align-items: center;
+}
+
+.header-right-contact {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.header-right-contact i {
+    color: var(--primary-color);
+    font-size: var(--font-size);
+    margin-left: 15px;
+}
+
+.header-right-contact a {
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.header-right-contact a:hover {
+    text-decoration: underline;
+}
+
+/* === Меню === */
+.menu-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.menu-icon {
+    display: none;
+    border: none;
+    font-size: var(--font-size);
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+    color: #0650B9;
+    gap: 5px;
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-bottom: 10px;
+    gap: 35px; 
+}
+
+.menu-list li {
+    margin-left: 20px;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: var(--font-size);
+}
+
+.menu-list a:hover {
+    color: var(--secondary-color);
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.menu-list a.active {
+    color: var(--primary-color);
+    font-size: var(--font-size);
+}
+
+/* === Hero === */
+.hero {
+    background-image: linear-gradient(#e3e6f521,#031c41e0), url("../images/header.jpg");
+    height: 80vh;
+    background-position: 0 0;
+    background-size: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 60px 40px 40px 40px;
+}
+
+.hero-items {
+    width: 100%;
+    height: 90%;
+    margin: 0px auto;
+    display: grid;
+    grid-template-areas: 
+        "i1 i1"
+        "i2 i3"
+        "i4 i5"
+    ;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 4fr 3fr 1fr;
+    justify-content: space-between;
+    gap: 45px;
+}
+
+.item-1 {
+    grid-area: i1;
+}
+
+.item-2 {
+    grid-area: i2;
+    justify-self: start;
+}
+
+.item-2 p {
+    font-size: calc(var(--font-size) + 4px);
+    color: var(--third-color);
+    font-weight: 300;
+}
+
+.item-4 p {
+    font-size: calc(var(--font-size) + 6px);
+    color: var(--secondary-color);
+    font-weight: 300;
+}
+
+.item-3 {
+    grid-area: i3;
+    justify-self: end;
+}
+
+.item-4 {
+    grid-area: i4;
+    justify-self: start;
+}
+
+.item-5 {
+    grid-area: i5;
+    justify-self: end;
+}
+
+.hero-button {
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    text-align: center;
+    text-transform: none;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    min-width: auto;
+    height: auto;
+    padding: 10px 0;
+    font-size: var(--font-size);
+    font-weight: 300;
+    line-height: 150%;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+.hero-button a {
+    color: var(--third-color);
+}
+
+.hero-button:hover {
+    background-color: var(--primary-color);
+}
+
+/* === Основной контент === */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    gap: 50px;
+}
+
+/* === Погода === */
+.weather, .galery, .activities, .contacts, .footer {
+    padding: 0 20px;
+}
+
+.weather-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.weather-image {
+    background-image: url(../images/weather.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    justify-content: start;
+    height: auto;
+    margin-top: 0px;
+    background-position: 25% center;
+    border-radius: 10px;
+}
+
+.weather-text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.weather-text p {
+    margin-bottom: 25px;
+}
+
+.weather-text h3 {
+    margin-bottom: 10px;
+}
+
+.weather-text ul {
+    margin-left: 20px;
+}
+
+.weather-text li {
+    padding: 10px 0;
+    color: var(--primary-color);
+}
+
+/* === Транспорт === */
+.transport {
+    background-image: linear-gradient(#001d46cc,#001d46cc), url("../images/transport.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: var(--padding);
+    border-radius: 10px;
+    background-position: 25% center;
+    color: var(--third-color);
+}
+
+.transport h2, .transport-card-title h3, .transport-wrapper p, .transport-card-text p, .transport-card-text li  {
+    color: var(--third-color);
+    font-weight: 300;
+}
+
+.transport-card-text p {
+    padding: 5px 0;
+    color: var(--secondary-color);
+}
+
+.transport-card-text ul {
+    margin-left: 20px;
+}
+
+.transport-card-text li {
+    padding: 5px;
+}
+
+.transport-grid {       /* Сетка карточек контента */
+    width: 100%;
+    height: 90%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-areas: 
+        "c1 c2 c3"
+        "c4 c4 c4"
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card-1 {
+    grid-area: c1;
+}
+
+.card-2 {
+    grid-area: c2;
+}
+
+.card-3 {
+    grid-area: c3;
+}
+
+.card-4 {
+    grid-area: c4;
+}
+
+.transport-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #ffffff1a;
+    padding: var(--padding);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.transport-card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.transport-card-title img {
+    height: 24px;
+    width: auto;
+}
+
+.transport-card-text h2 {
+    font-style: 20px;
+    margin: 0 10px 10px;
+}
+
+.transport-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0 0 0 0.2);
+}
+
+/* === Галерея === */
+.carousel-inner {
+    border-radius: 10px;
+    height: 60vh;
+}
+
+/* === Активности === */
+.accordion {
+    border-radius: 10px;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--third-color);
+    background-color: var(--secondary-color);
+    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
+
+.accordion-button {
+    color: var(--primary-color);
+}
+
+.accordion-item {
+    color: var(--primary-color);
+}
+
+/* === Курорты === */
+.resorts {
+    background-image: linear-gradient(#001d46cc,#001d46cc), url("../images/resort.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: var(--padding);
+    border-radius: 10px;
+    background-position: 50% center;
+    background-attachment: scroll, fixed;
+}
+
+.resorts h2, .resorts-wrapper p, .resort-card-text li {
+    color: var(--third-color);
+    font-weight: 300;
+}
+
+.resorts-wrapper p {
+    margin-bottom: 25px;
+}
+
+.resort-card h3 {
+    color: var(--secondary-color);
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.resorts-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 60px 20px;
+}
+
+.resort-card {
+    flex: 1 1 48%;
+}
+
+.resort-card-content {
+    box-sizing: border-box;
+    flex-grow: 1;
+    display: flex;
+    gap: 10px;
+}
+
+.resort-card-content img{
+    width: auto;
+    max-width: 200px;
+    max-height: 150px;
+    border-radius: 10px;
+}
+
+.resort-card-text span{
+    text-decoration: underline;
+}
+
+.resort-card-text p {
+    margin-bottom: 5px;
+    font-size: calc(var(--font-size)-2px);
+}
+
+.resort-card-text li {
+    font-size: calc(var(--font-size)-2px);
+}
+
+/* === Контакты === */
+.contacts .contacts-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    margin: auto;
+}
+
+.contacts h1 {
+    color: var(--third-color);
+    font-weight: 300;
+}
+
+.contact-image {
+    width: 700px;
+    border-radius: 10px;
+    flex-grow: 0;
+}
+
+.form-container {
+    flex: 1 1 400px;
+    /* max-width: 400px; */
+}
+
+.form-container h2 {
+    margin-bottom: 15px;
+}
+
+.feedback input, 
+.feedback textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.feedback input {
+    margin-bottom: 20px;
+}
+
+.feedback textarea {
+    margin-bottom: 10px;
+}
+
+/* === Футер === */
+.footer {
+    background-image: linear-gradient(#001d46b2, #001d46b2), url("../images/pattern-footer.jpg");
+    padding: 30px var(--padding);
+    margin-top: 50px;
+    border-radius: 10px 10px 0 0;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-card {
+    flex: 1 1 50px;    
+}
+
+.footer-card h3 {
+    color: var(--third-color);  
+}
+
+.foot-3 h3 {
+    font-family: 'Ice kingdom (Frozen) Cyrillic';
+    font-size: 36px;
+    color: var(--third-color);
+}
+
+.foot-3 span {
+    font-family: 'Ice kingdom (Frozen) Cyrillic';
+    font-size: 36px;
+    color: var(--secondary-color);
+}
+
+.footer p {
+    margin: 8px 0;
+    color: var(--third-color);
+}
+
+.footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    color: var(--third-color);
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer i {
+    margin-right: 8px;
+    color: var(--third-color);
+}
+
+.footer i:hover {
+    color: var(--secondary-color);
+}
+
+.foot-1 {
+    flex-basis: 25%;
+}
+
+.foot-2 {
+    flex-basis: 25%;
+}
+
+.foot-3 {
+    flex-basis: 40%;
+}
+
+.social-link {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    color: var(--third-color);
+}
+
+/* === Кнопка вверх */
+#topBtn {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 130px;
+    bottom: 100px;
+    background-color: #57B0F4c2;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+#topBtn:hover {
+    background-color: var(--primary-color);
+}
+
+
+/* === АДАПТИВ === */
+/* === Для ноутбуков === */
+@media (max-width: 1120px) {
+    .resort-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* === Для планшетов === */
+@media (max-width: 992px) {
+    .menu-wrapper {
+        justify-content: space-between;
+    }
+
+    .menu-icon {
+        display: flex;
+        text-align: center;
+    }
+
+    .menu-list {
+        position: fixed;
+        top: 130px;
+        right: 0px;
+        gap: 5px;
+        width: 200px;
+        transform: translateX(100%);
+        opacity: 0;
+        flex-direction: column;
+        background-color: var(--deep-bg);
+        padding: var(--padding);
+        border-radius: 8px 0 0 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+        transition: transform 0.3 ease, opacity 0.3 ease;
+        z-index: 5;
+    }
+
+    .menu-list.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .menu-list a {
+        margin: 30px 0;
+        line-height: 40px;
+        text-align: center;
+        color: var(--third-color);
+    }
+
+    .weather-wrapper {
+        display: block;
+    }
+
+    .weather-image {
+        width: 100%;
+        min-width: 200px;
+        height: 60vh;
+    }
+    
+    .weather-text {
+        padding-top: 20px;
+        display: block;
+        width: 100%;
+    }
+
+    .footer-wrapper {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .social-link, .footer-card {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        height: 600px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .hero-items {
+        grid-template-areas: 
+            "i1 i1"
+            "i2 i2"
+            "i4 i4"
+            "i3 i5"
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 4fr 2fr 3fr 1fr;
+        justify-content: space-between;
+        gap: 35px;
+    }
+
+    .item-3 {
+        justify-self: center;
+    }
+
+    .item-5 {
+        justify-self: center;
+    }
+
+    .item-2 p {
+        font-size: calc(var(--font-size) + 2px);
+    }
+
+    .item-4 p {
+        font-size: calc(var(--font-size) + 4px);
+    }
+
+    .transport-grid {
+        grid-template-areas: 
+            "c1 c2"
+            "c3 c4"
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .carousel-inner {
+        height: auto;
+    }
+
+    .contacts .contacts-wrapper {
+        flex-direction: column;
+    }
+
+    .contact-image {
+        width: 100%;
+        order: 2;
+        max-height: 400px;
+        border-radius: 10px;
+    }
+
+    .form-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* === Для смартфонов === */
+@media (max-width: 576px) {
+    .header-right-contacts {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    .header-right-contact {
+        display:inline-block;
+    }
+
+    .item-2 p {
+        font-size: var(--font-size);
+    }
+
+    .item-4 p {
+        font-size: calc(var(--font-size) + 2px);
+    }
+
+    .weather-image {
+        height: 40vh;
+    }
+
+    .transport-grid {
+        grid-template-areas: 
+            "c1"
+            "c2"
+            "c3"
+            "c4"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .resort-card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .resort-card-content img{
+        width: 100%;
+        max-width: 536px;
+        max-height: none;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+/* === Для смартфонов дополнительно === */
+@media (max-width: 480px) {
+      .hero-items {
+        grid-template-areas: 
+            "i1"
+            "i2"
+            "i3"
+            "i5"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 3fr 1fr 1fr;
+        justify-content: space-between;
+        gap: 25px;
+    }
+
+    .item-2 p {
+        font-size: var(--font-size);
+    }
+
+    .item-4 {
+        display: none;
+    }
+
+    .weather-image {
+        height: 30vh;
+    }
+}
+
+/* === Для очень маленьких экранов === */
+@media (max-width: 380px) {
+    .header {
+        height: 150px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-right-contacts {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header-logo br {
+	    display: none;
+    }
+
+    .header-logo a, .header-logo span {
+        font-size: 40px;
+    }
+
+    .menu-icon {
+        margin-top: 10px;
+    }
+}
+
