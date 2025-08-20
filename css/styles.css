@@ -648,6 +648,7 @@ hr {
     border-radius: 10px;
     cursor: pointer;
     display: none;
+	z-index: 9999;
 }
 
 #topBtn:hover {
@@ -900,4 +901,5 @@ hr {
         margin-top: 10px;
     }
 }
+
 
