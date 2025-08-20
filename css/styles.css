@@ -882,6 +882,9 @@ hr {
         justify-content: center;
     }
 
+	.menu-list {
+        top: 150px;
+
     .header-right-contacts {
         margin-top: 10px;
         flex-direction: column;
@@ -901,5 +904,6 @@ hr {
         margin-top: 10px;
     }
 }
+
 
 
