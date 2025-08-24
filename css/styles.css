@@ -648,7 +648,6 @@ hr {
     border-radius: 10px;
     cursor: pointer;
     display: none;
-	z-index: 9999;
 }
 
 #topBtn:hover {
@@ -882,9 +881,6 @@ hr {
         justify-content: center;
     }
 
-	.menu-list {
-        top: 150px;
-
     .header-right-contacts {
         margin-top: 10px;
         flex-direction: column;
@@ -903,7 +899,9 @@ hr {
     .menu-icon {
         margin-top: 10px;
     }
+
+    .menu-list {
+        top: 190px;
+    }
 }
-
-
 
